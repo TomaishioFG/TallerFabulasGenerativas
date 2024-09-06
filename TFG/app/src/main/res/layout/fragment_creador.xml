@@ -1,0 +1,284 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textViewGeneros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Géneros"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageButton
+                    android:id="@+id/btnAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_add"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <ImageButton
+                    android:id="@+id/infoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_info"
+                    android:padding="8dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayoutGeneros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioFantasia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:text="Fantasía"
+                style="@style/CustomRadioButton"/>
+
+            <RadioButton
+                android:id="@+id/radioCienciaFiccion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:text="Ciencia Ficción"
+                style="@style/CustomRadioButton"/>
+
+            <!--RadioButton
+                android:id="@+id/radioWestern"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:text="Western"
+                style="@style/CustomRadioButton"/-->
+
+            <!--RadioButton
+                android:id="@+id/radioPiratas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:text="Piratas"
+                style="@style/CustomRadioButton"/-->
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textViewNarrador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Narrador"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupNarrador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/radioPrimera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Primera"
+                style="@style/CustomRadioButton"/>
+
+            <RadioButton
+                android:id="@+id/radioSegunda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Segunda"
+                style="@style/CustomRadioButton"/>
+
+            <RadioButton
+                android:id="@+id/radioTercera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tercera"
+                style="@style/CustomRadioButton"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewGenerosSecundarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Géneros secundarios"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"/>
+
+        <GridLayout
+            android:id="@+id/gridLayoutGenerosSecundarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/checkTerror"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Terror"
+                style="@style/CustomCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkRomance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Romance"
+                style="@style/CustomCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkAventuras"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Aventuras"
+                style="@style/CustomCheckBox"/>
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textViewTramas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tramas"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"/>
+
+        <GridLayout
+            android:id="@+id/gridLayoutTramas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/checkBusqueda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Búsqueda"
+                style="@style/CustomCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkRescate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Rescate"
+                style="@style/CustomCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkPobrezaARiqueza"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Pobreza a Riqueza"
+                style="@style/CustomCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkRenacimiento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Renacimiento"
+                style="@style/CustomCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkSuperandoMonstruo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Superando al Monstruo"
+                style="@style/CustomCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkTragedia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Tragedia"
+                style="@style/CustomCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkViajeIdaVuelta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Viaje de Ida y Vuelta"
+                style="@style/CustomCheckBox"/>
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnGenerar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generar"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"/>
+    </LinearLayout>
+</ScrollView>

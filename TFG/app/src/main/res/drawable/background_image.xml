@@ -1,0 +1,5 @@
+<!-- res/drawable/background_image.xml -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/placeholder"
+    android:gravity="center"
+    android:tileMode="disabled" />
